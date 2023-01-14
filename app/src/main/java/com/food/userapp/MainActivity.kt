@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.food.userapp.ui.UserFoodApp
 import com.food.userapp.ui.theme.UserAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,24 +21,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             UserAppTheme {
-                UserApp()
+                UserFoodApp()
             }
         }
     }
-}
-
-@Composable
-private fun UserApp(modifier: Modifier = Modifier) {
-    Column(modifier = modifier
-        .fillMaxSize()
-        .wrapContentSize(align = Alignment.Center)) {
-        Text(text = "User App", style = MaterialTheme.typography.h1)
-    }
-
-}
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-private fun UserAppPreview() {
-    UserApp()
 }
