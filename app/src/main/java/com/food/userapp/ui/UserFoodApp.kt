@@ -5,6 +5,6 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun UserFoodApp(modifier: Modifier = Modifier) {
-    LoginScreen()
+    SignupScreen()
 }
 

@@ -11,7 +11,6 @@ import androidx.compose.material.icons.outlined.KeyboardArrowRight
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,7 +19,7 @@ import com.food.userapp.R
 import com.food.userapp.ui.theme.UserAppTheme
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier) {
+fun IntroScreen(modifier: Modifier = Modifier) {
     Column(modifier = modifier.background(MaterialTheme.colors.background)) {
         Card(modifier = modifier
             .weight(1f)
@@ -98,16 +97,16 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun LoginScreenLightThemePreview() {
+private fun IntroScreenLightThemePreview() {
     UserAppTheme(darkTheme = false) {
-        LoginScreen()
+        IntroScreen()
     }
 }
 
 @Preview(showBackground = true, showSystemUi = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
-private fun LoginScreenDarkThemePreview() {
+private fun IntroScreenDarkThemePreview() {
     UserAppTheme(darkTheme = true) {
-        LoginScreen()
+        IntroScreen()
     }
 }
