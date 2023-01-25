@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.KeyboardArrowLeft
 import androidx.compose.material.icons.outlined.KeyboardArrowRight
 import androidx.compose.material.icons.outlined.Menu
 import androidx.compose.runtime.Composable
@@ -20,23 +21,30 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
         .fillMaxSize()
         .background(MaterialTheme.colors.background)
         .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally) {
+        verticalArrangement = Arrangement.spacedBy(16.dp)) {
 
-        SettingsButton(text = "My Orders", modifier = modifier.padding(top = 16.dp))
+        Row(modifier = modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
 
-        Divider(modifier = modifier
-            .fillMaxWidth()
-            .padding(vertical = 16.dp))
+            Icon(imageVector = Icons.Outlined.KeyboardArrowLeft,
+                contentDescription = null,
+                tint = MaterialTheme.colors.onSurface,
+                modifier = modifier.size(30.dp))
+
+            Text(text = "Settings",
+                style = MaterialTheme.typography.h6,
+                color = MaterialTheme.colors.onSurface)
+        }
+
+        SettingsButton(text = "My Orders")
+
+        Divider(modifier = modifier.fillMaxWidth())
 
         SettingsButton(text = "History")
-        Divider(modifier = modifier
-            .fillMaxWidth()
-            .padding(vertical = 16.dp))
+        Divider(modifier = modifier.fillMaxWidth())
 
         SettingsButton(text = "Add new address")
-        Divider(modifier = modifier
-            .fillMaxWidth()
-            .padding(vertical = 16.dp))
+        Divider(modifier = modifier.fillMaxWidth())
 
         SettingsButton(text = "Log out")
     }
