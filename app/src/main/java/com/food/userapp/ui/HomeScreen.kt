@@ -11,6 +11,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ExitToApp
 import androidx.compose.material.icons.outlined.Menu
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,17 +34,14 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
         Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Outlined.Menu, contentDescription = null)
-            }
 
             Text(text = "Restaurants",
                 style = MaterialTheme.typography.h6,
-                modifier = modifier.weight(1f),
+                modifier = modifier.wrapContentWidth(align = Alignment.Start),
                 color = MaterialTheme.colors.onSurface)
 
             IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Outlined.ExitToApp, contentDescription = null)
+                Icon(imageVector = Icons.Outlined.Settings, contentDescription = null, modifier = modifier.fillMaxWidth().wrapContentWidth(align = Alignment.End))
             }
         }
 
